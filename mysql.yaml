@@ -6,9 +6,23 @@
     ansible.builtin.package:
       name: mysql-server
       state: installed
+
   - name: start mysql-server service
     ansible.builtin.service:
       name: mysqld
       state: started
       enabled: yes
+
+  - name: Connect to MySQL server
+    community.mysql.mysql_info:
+      login_user: root
+      login_password: ExpenseApp@1
+      login_host: 172.31.27.59
+      register: mysql_connection_output
+
+  - name: print the output
+    ansible.builtin.debug:
+      msg: "{{ mysql_connection_output }}" 
+
+
     
