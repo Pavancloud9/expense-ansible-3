@@ -22,7 +22,7 @@
 
   - name: print the output
     ansible.builtin.debug:
-      msg: "{{ mysql_connection_output }}" 
+      msg: "{{ mysql_connection_output }}"
 
 
     
