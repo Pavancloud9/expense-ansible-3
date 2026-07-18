@@ -13,9 +13,14 @@
       name: nodejs
       state: present
 
-  # - name: Create expense user
-  #   ansible.builtin.user:
-  #     name: expense
-  #     state: present
+  - name: Create expense user
+    ansible.builtin.user:
+      name: expense
+
+  # - name: Create a new directory
+  #   ansible.builtin.file:
+  #     path: /path/to/target/folder
+  #     state: directory
+      
 
   
