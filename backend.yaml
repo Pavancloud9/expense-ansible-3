@@ -47,7 +47,7 @@
 
   - name: Import the SQL schema to the database
     community.mysql.mysql_db:
-      state: Import
+      state: import
       name: all
       login_host: 172.31.45.12
       login_user: root
